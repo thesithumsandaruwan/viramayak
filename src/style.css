@@ -104,7 +104,7 @@ body {
 /* Scroll Indicator Styles */
 .scroll-indicator {
   position: absolute;
-  bottom: 7%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   width: 34px;
