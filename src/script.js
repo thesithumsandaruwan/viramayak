@@ -86,7 +86,6 @@ tl.fromTo(
     duration: 3,
   },
   "<1.2" // starts 1.2 seconds before the previous animation
-  // he times from the start of the previous animation and since we're using 1.5s for the prev duration it's like 70% of the previous animation
 );
 
 // logo purple
@@ -121,7 +120,6 @@ tl.set(
   "<+=2.1"
 );
 
-// hide the hero-1 so we can show the hero-2
 tl.to(
   ".hero-1-container",
   {
@@ -135,14 +133,14 @@ tl.to(
   ".hero-text-logo",
   {
     opacity: 0,
-    duration: 3,
+    duration: 2,
   },
   "<1.5"
 );
 
 tl.set(".hero-1-container", { opacity: 0 });
 
-tl.set(".hero-2-container", { opacity: 1 });
+tl.to(".hero-2-container", { opacity: 1, duration: 3 }, "<+=0.2");
 
 tl.fromTo(
   ".hero-2-container",
