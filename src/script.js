@@ -17,6 +17,20 @@ gsap.to(".overlay", {
   },
 });
 
+// Scroll Indicator
+const scrollIndicator = document.querySelector(".scroll-indicator");
+const bounceTimeline = gsap.timeline({
+  repeat: -1,
+  yoyo: true,
+});
+
+bounceTimeline.to(scrollIndicator, {
+  y: 20,
+  opacity: 0.6,
+  duration: 0.8,
+  ease: "power1.inOut",
+});
+
 // Create a timeline for better control
 const tl = gsap.timeline({
   scrollTrigger: {
@@ -139,6 +153,7 @@ tl.to(
 );
 
 tl.set(".hero-1-container", { opacity: 0 });
+tl.set(".hero-2-container", { visibility: "visible" });
 
 tl.to(".hero-2-container", { opacity: 1, duration: 3 }, "<+=0.2");
 

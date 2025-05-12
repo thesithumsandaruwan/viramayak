@@ -145,6 +145,7 @@ body {
   align-items: flex-start;
   text-align: left;
   padding: 0 2rem; /* mobile */
+  visibility: hidden;
 }
 
 .hero-2-container p {
@@ -175,4 +176,20 @@ body {
   .hero-2-container h3 {
     font-size: 3.5rem;
   }
+}
+
+/* Scroll Indicator Styles */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;
+  height: 14px;
+}
+
+.scroll-indicator svg {
+  color: #ffb0c4;
+  width: 100%;
+  height: 100%;
 }
