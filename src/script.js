@@ -40,7 +40,6 @@ const tl = gsap.timeline({
     start: "top top",
     end: "+=2000",
     ease: "none",
-    markers: true,
   },
 });
 

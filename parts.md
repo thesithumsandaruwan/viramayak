@@ -4,7 +4,7 @@ Don't need to explain much, maybe talk a little about using the [actual website]
 
 ```html
 <div class="container">
-  <div class="overlay" id="pageOverlay"></div>
+  <div class="overlay"></div>
   <div class="hero-1-container">
     <div class="hero-main-container">
       <img
