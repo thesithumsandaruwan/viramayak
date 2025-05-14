@@ -177,3 +177,9 @@ tl.fromTo(
   "<1.2" // starts 1.2 seconds before the previous animation
   // he times from the start of the previous animation and since we're using 1.5s for the prev duration it's like 70% of the previous animation
 );
+
+// End the timeline with the hero-2-container visible
+tl.to(".hero-2-container", {
+  opacity: 1,
+  duration: 1
+}, ">");
