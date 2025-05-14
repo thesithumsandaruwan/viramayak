@@ -211,6 +211,11 @@ body {
     object-position: center center; /* Center the image */
   }
 
+  .hero-main-logo { /* Added for mobile */
+    object-fit: contain; /* Make gta_logo_cut.webp (img tag) fit without cropping */
+    object-position: center center; /* Center the image */
+  }
+
   .hero-text-logo {
     background-size: auto 15vh; /* Adjust logo size for mobile, height based */
     background-position: center center; /* Center the logo */
