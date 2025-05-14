@@ -42,13 +42,13 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
-  transform: scale(1.25);
+  /* transform: scale(1.25); */ /* Adjusted in media query */
   background-image: url("../public/gta_logo_cut1.webp");
-  background-size: 1000vh;
+  /* background-size: 1000vh; */ /* Adjusted in media query */
   background-position: 50% 41.7%;
   background-repeat: no-repeat;
   background-origin: content-box;
-  padding-bottom: 200px;
+  /* padding-bottom: 200px; */ /* Adjusted in media query */
 }
 
 .hero-main-image {
@@ -199,14 +199,49 @@ body {
   font-size: 2.5rem;
 }
 
-/* Desktop and Mobile styles unified to prevent jumping */
-@media (max-width: 1023px) {
-  .hero-text {
-    font-size: 4rem;
+/* Mobile specific styles */
+@media (max-width: 767px) {
+  .hero-main-container {
+    transform: scale(1); /* Adjust scale for mobile */
+    background-size: 100% auto; /* Fit image horizontally, adjust height automatically */
+    padding-bottom: 100px; /* Reduce padding for mobile */
   }
 
-  .hero-2-container {
-    padding: 0 2rem;
+  .hero-text-logo {
+    background-size: 20vh; /* Adjust logo size for mobile */
+    padding-bottom: 100px; /* Reduce padding for mobile */
+  }
+
+  .hero-text {
+    font-size: 2.5rem; /* Reduce font size for mobile */
+    margin-top: 40%; /* Adjust margin for mobile */
+  }
+
+  .hero-2-container h3 {
+    font-size: 2rem; /* Adjust heading size for mobile */
+  }
+
+  .hero-2-container p {
+    font-size: 0.9rem; /* Adjust paragraph size for mobile */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Tablet specific styles if needed, or inherit from mobile/desktop */
+  .hero-main-container {
+    transform: scale(1.1); 
+    background-size: 800vh; /* Example adjustment for tablets */
+    padding-bottom: 150px;
+  }
+
+  .hero-text-logo {
+    background-size: 24vh;
+    padding-bottom: 150px;
+  }
+
+  .hero-text {
+    font-size: 3.5rem;
+    margin-top: 50%;
   }
 }
 
